@@ -84,9 +84,7 @@
                             <div class="col-md-6">
                                 <select name="role" id="role" class="form-control" required>
                                     <option value="">Choose option</option>
-                                    <option value="data_entrant">Data Entrant</option>
-                                    <option value="agent">Agent</option>
-                                    <option value="user">User</option>
+                                    <option value="user">Voter</option>
                                 </select>
                                 @error('role')
                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>

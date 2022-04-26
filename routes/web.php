@@ -21,3 +21,7 @@ Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('user', 'App\Http\Controllers\UserController')->middleware('auth');
+Route::resource('booth', 'App\Http\Controllers\BoothController')->middleware('auth');
+Route::resource('vote', 'App\Http\Controllers\VoteController')->middleware('auth');
+Route::resource('post', 'App\Http\Controllers\PostController')->middleware('auth');
+Route::resource('candidate', 'App\Http\Controllers\CandidateController')->middleware('auth');

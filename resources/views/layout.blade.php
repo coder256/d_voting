@@ -30,7 +30,7 @@
         <div class="app-header__logo">
             <div>
                 <a href="{{ route('home') }}">
-                    <img src="{{ asset('images/i-find-logo.jpg') }}" style="height: 50px; width: 100px;">
+                    <img src="{{ asset('images/logo.png') }}" style="height: 50px; width: 100px;">
                 </a>
             </div>
             <div class="header__pane ml-auto">
@@ -143,32 +143,20 @@
                         <li>
                             <a href="javascript:;">
                                 <i class="metismenu-icon pe-7s-bookmarks"></i>
-                                Items
+                                Posts
                                 <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                             </a>
                             <ul>
                                 <li>
-                                    <a href="{{ route('item.create') }}">
+                                    <a href="{{ route('post.create') }}">
                                         <i class="metismenu-icon">
                                         </i>Create
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('item.index') }}">
+                                    <a href="{{ route('post.index') }}">
                                         <i class="metismenu-icon">
                                         </i>List
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{--{{ route('ioa.create') }}--}}">
-                                        <i class="metismenu-icon">
-                                        </i>Pending Verification
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{--{{ route('ioa.create') }}--}}">
-                                        <i class="metismenu-icon">
-                                        </i>Taken
                                     </a>
                                 </li>
                             </ul>
@@ -176,26 +164,62 @@
                         <li>
                             <a href="javascript:;">
                                 <i class="metismenu-icon pe-7s-bookmarks"></i>
-                                Item Requests
+                                Candidates
                                 <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                             </a>
                             <ul>
                                 <li>
-                                    <a href="{{--{{ route('ioa.create') }}--}}">
+                                    <a href="{{ route('candidate.create') }}">
                                         <i class="metismenu-icon">
                                         </i>Create
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{--{{ route('ioa.create') }}--}}">
+                                    <a href="{{ route('candidate.index') }}">
                                         <i class="metismenu-icon">
                                         </i>List
                                     </a>
                                 </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <i class="metismenu-icon pe-7s-bookmarks"></i>
+                                Votes
+                                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                            </a>
+                            <ul>
                                 <li>
-                                    <a href="{{--{{ route('ioa.create') }}--}}">
+                                    <a href="{{ route('vote.create') }}">
                                         <i class="metismenu-icon">
-                                        </i>Found
+                                        </i>Create
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('vote.index') }}">
+                                        <i class="metismenu-icon">
+                                        </i>List
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <i class="metismenu-icon pe-7s-bookmarks"></i>
+                                Booths
+                                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="{{ route('booth.create') }}">
+                                        <i class="metismenu-icon">
+                                        </i>Create
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('booth.index') }}">
+                                        <i class="metismenu-icon">
+                                        </i>List
                                     </a>
                                 </li>
                             </ul>
