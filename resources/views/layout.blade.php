@@ -11,7 +11,7 @@
     <meta name="description" content="Apprenticeship.">
     <meta name="msapplication-tap-highlight" content="no">
 
-    <title>IFindUG</title>
+    <title>Voting</title>
 
     <link rel="icon" href="{{ asset('images/android-chrome-512x512.png') }}" sizes="512x512" type="image/png">
     <link rel="icon" href="{{ asset('images/android-chrome-192x192.png') }}" sizes="192x192" type="image/png">

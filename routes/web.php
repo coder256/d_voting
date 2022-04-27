@@ -25,3 +25,4 @@ Route::resource('booth', 'App\Http\Controllers\BoothController')->middleware('au
 Route::resource('vote', 'App\Http\Controllers\VoteController')->middleware('auth');
 Route::resource('post', 'App\Http\Controllers\PostController')->middleware('auth');
 Route::resource('candidate', 'App\Http\Controllers\CandidateController')->middleware('auth');
+Route::get('/candidate/candidates/{id}', [App\Http\Controllers\CandidateController::class, 'candidates'])->middleware('auth');
