@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VotingRequestController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/pollRequest/{boothId}', [VotingRequestController::class, 'get'])->name('api.poll');
+
+Route::post('/pollRequest/update/{boothId}', [VotingRequestController::class, 'update']);
+
+Route::get('/voting/candidates/{id}', [HomeController::class, 'candidates'])->name('api.candidates');

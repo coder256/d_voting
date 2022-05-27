@@ -29,7 +29,7 @@
     <div class="app-header header-shadow">
         <div class="app-header__logo">
             <div>
-                <a href="{{ route('home') }}">
+                <a href="{{ route('dashboard.home') }}">
                     <img src="{{ asset('images/logo.png') }}" style="height: 50px; width: 100px;">
                 </a>
             </div>
