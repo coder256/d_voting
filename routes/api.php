@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VotingRequestController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\VoteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,5 @@ Route::get('/pollRequest/{boothId}', [VotingRequestController::class, 'get'])->n
 Route::post('/pollRequest/update/{boothId}', [VotingRequestController::class, 'update']);
 
 Route::get('/voting/candidates/{id}', [HomeController::class, 'candidates'])->name('api.candidates');
+
+Route::get('/test', [VoteController::class, 'test']);

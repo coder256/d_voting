@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Middleware\EnsureVotingIsValid;
+use App\Http\Controllers\VoteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,5 @@ Route::get('/candidate/candidates/{id}', [App\Http\Controllers\CandidateControll
 Route::get('/voting/scan',[HomeController::class, 'scan'])->name('home.scan');
 Route::get('/voting/vote', [HomeController::class, 'vote'])->name('home.vote')->middleware(EnsureVotingIsValid::class);
 Route::post('/voting/cast', [HomeController::class, 'cast'])->name('home.cast');
+
+Route::get('/test', [VoteController::class, 'test']);

@@ -147,4 +147,15 @@ class VoteController extends Controller
 
         return redirect('/vote');
     }
+
+    public function test() {
+        $votes = DB::table('votes')
+            ->join('posts', 'posts.id', '=', 'votes.post_id')
+            ->join('candidates', 'candidates.id', '=', 'votes.candidate_id')
+            ->select('posts.name', 'candidates.first_name', 'candidates.last_name',
+                'votes.id', 'votes.voter_id', 'votes.created_at')
+            ->get();
+
+        return response()->json($votes);
+    }
 }
